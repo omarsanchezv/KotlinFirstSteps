@@ -1,0 +1,8 @@
+#folders
+.idea
+build
+out
+lib
+
+#all files of
+*.iml
