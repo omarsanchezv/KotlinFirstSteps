@@ -1,10 +1,18 @@
 package com.wizeline.kotlin
 
 class Variables {
-    val inmutable = null
-    var mutable: String = null
-    var optional : String? = null
+    val inmutable : String= "Omar Sanchez"
+    var mutable: String = "mutable"
+    var optional : String? = "opcional"
+    var numeroDeLetras : Int = 0
 
+    constructor(){
+        valVariable()
+        varVariable(mutable)
+        valOptinal()
+        valNested()
+
+    }
     fun valVariable() {
         println(inmutable)//imprime tu nombre
     }
@@ -14,11 +22,14 @@ class Variables {
     }
 
     fun valOptinal(){
-        println(optional.length)
+        if(optional != null) {
+            numeroDeLetras = optional?.length!!
+            println(numeroDeLetras)
+        }
     }
 
     fun valNested(){
-        println("la parabra es optional y tiene numeroDeLetras ")
+        println("la parabra es $optional y tiene $numeroDeLetras letras")
     }
 
 
